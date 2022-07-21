@@ -25,6 +25,8 @@ func SetupRouter() *gin.Engine {
 		v1Group.POST("/todo", controller.CreateTodo)
 		// 查看所有的待办事项
 		v1Group.GET("/todo", controller.GetTodoList)
+		// 查看待办事项详情
+		v1Group.GET("/todo/:id", controller.GetATodo)
 		// 修改某一个待办事项
 		v1Group.PUT("/todo/:id", controller.UpdateATodo)
 		// 删除某一个待办事项
